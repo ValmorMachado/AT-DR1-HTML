@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/modernizr.js"></script>
+    <title>Assessment</title>
+</head>
+<body>
+
+    <header id="titulo">
+        <div id="titulo-envelope">
+            <div id="titulo-menu">
+                <figure>
+                    <img src="images/logo.png" alt="Logo - Câmara dos Deputados" title="Plenário da câmara do deputados" />
+                </figure>
+                <a href="#">dados abertos</a>
+            </div>
+            <nav id="links">
+                <ul>
+                    <li><a href="index.html#">Início</a></li>
+                    <li><a href="index.html#deputados">Deputados</a></li>
+                    <li><a href="index.html#partidos">Partidos</a></li>
+                    <li><a href="index.html#bancadas">Bancadas</a></li>
+                    <li><a href="index.html#noticias">Notícias</a></li>
+                    <li><a href="index.html#plenaria">Plenária</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="assessment.html">Assessment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="assessment">
+
+        <h1>ASSESSMENT</h1>
+
+        <div id="questoes">
+            <h2>Experiência na disciplina</h2>
+            <p>Trabalhei como desenvolvedor web entre 2000 e 2006. Trabalhei com tecnologias em front end com HTML, CSS e Javascript
+                (Em alguns navegadores antigos usava VBscript). Posso dizer que voltando a estudar tenho consciência que muita coisa mudou.
+                O que guardo da época que trabalhei na área foi que tenho que sempre me atualizar e aprender.</p>
+            <p>Nesta disciplina percebo que muita coisa mudou para melhor. Antes desenvolvia layouts para vários tipos de navegadores.
+                Aprendi tecnicas modernas de padronização de layouts para vários navegadores, além de me atualizar
+                nas novas TAGS semânticas em HTML5 e novos recursos de CSS.</p>
+            <p>Agradeço as aulas da professora Caroline. A condução da matéria pela professora foi muito boa. As aulas foram muito bem preparadas
+                e a disposição da professora em passar o conhecimento foi muito bom. Devido a situação pessoal que passo no momento não tive
+                uma interação forte extraclasse, porém quando conversei com ela foi prestativa e conversando com meus colegas eles relataram
+                que o atendimento fora das aulas foi excelente.</p>
+        </div>
+
+        <div id="questoes">
+
+            <h2>Design Responsivo</h2>
+                <h3>Quando é recomendando a criação de um site separado para mobile? Seria este o caso deste site da Câmara de Deputados?</h3>
+
+                <p>Ter um site mobile ou um site responsivo é fundamental para uma boa experiência do usuário e um bom ranqueamento do seu endereço.</p>
+                <p>A versão mobile é preferível em projetos mais complexos que demandam mecanismos específicos na utilização e experiência do usuário.
+                    O ideal é que seja feito um estudo com a equipe para identificar se a página na internet exige esse tipo de site.
+                </p>
+                <p>
+                    A maior vantagem do site responsivo é que toda a programação é feita uma só vez em uma única versão,
+                    o que consequentemente requer um investimento mais baixo e menos manutenção. Inclusive, a maioria das empresas
+                    de desenvolvimento de sites já incluem a responsividade como um requisito básico dos projetos.
+                </p>
+                <p>
+                    Vale lembrar que uma solução não é superior à outra: elas atingem objetivos diferentes de acordo com necessidades específicas.
+                    Por isso, deve ser bem estudada quais são as demandas do seu site para fazer a escolha mais acertada.
+                </p>
+                <p>O site da Câmara dos Deputados apresenta mais informações de textos, com
+                    imagens, dispostas em forma de lista. Sem necessidade de criar dois projetos separados. O site responsivo é capaz de atender bem usuários mobile e web.
+                </p>
+
+                <h3>No caso de um CSS específico para impressão (print), como ele deve ser inserido?</h3>
+
+                <p>Usamos a tag link para referenciar o arquivo css de impressão e o atributo media=“print” após a página de estilos principal como no exemplo abaixo:</p>
+                <pre>
+                    <code>
+                        &lt;link type="text/css" rel="stylesheet" href="principal.css" /&gt;
+                        &lt;link type="text/css" rel="stylesheet" media="print" href="imprimir.css" /&gt;
+                    </code>
+                </pre>
+                <p>No exemplo anterior os estilos dentro de imprimir.css serão aplicados após o estilo principal.
+                </p>
+                <p>Podemos também mudar no próprio CSS através do @Media Rule. Dessa forma as regras css são sobrescritas na hora da impressão. </p>
+                <pre>
+                    <code>
+                        /* Exemplo da folha de estilo principal */
+                        div {
+                        padding-bottom: 2em;
+                        color: #FFFFFF;
+                        background-color: #000000;
+                        }
+
+                        /* Quando imprimir usa as regras abaixo */
+                        @media print {
+
+                            div {
+                                padding-bottom: 1.5em;
+                                color: #000000;
+                                background-color: #FFFFFF;
+                            }
+                        }
+                    </code>
+                </pre>
+
+        </div>
+
+        <div id="questoes">
+
+            <h2>Multimídia Web:</h2>
+                <h3>O elemento audio permite como elemento-filho o elemento source. Quais são os atributos que o source permite e qual conteúdo eles
+                     suportam? Quais os outros atributos do elemento audio e quando devem ser utilizados?</h3>
+                <p>No HTML 5, o elemento source substitui o atributo src.</p>
+                <p>Atributos source:</p>
+                <ul>
+                    <li>src: Endereço do arquivo de mídia;</li>
+                    <li>type: Tipo de mídia: wav, wave, mp3, ogg;
+                        <ul>
+                            <li>Permite usar o atributo codec.</li>
+                        </ul>
+                    </li>
+                    <li>media: São os meios que devem ser apresentados os áudios;</li>
+                    <li>preload: Carregamento do aúdio quando é lida a página(auto metadata none);</li>
+                    <li>loop: Quando o aúdio termina, volta para o inicio;</li>
+                    <li>controls: Customiza os controles a serem mostrados.</li>
+                </ul>
+
+                <h3>O elemento <code>&lt;video/&gt;</code> permite como elemento-filho o elemento source. Quais são os atributos que o source permite e
+                    qual conteúdo eles suportam? Quais os outros atributos do elemento video e quando devem ser utilizados?</h3>
+
+                <p>A TAG vídeo pede obrigatoriamente os atributos src e type.</p>
+                <p>Formatos de vídeos suportados: webm, mp4 e ogg.</p>
+
+                <p>Atributos source:</p>
+                <ul>
+                    <li>src: Endereço do arquivo de mídia;</li>
+                    <li>height: Altura do vídeo;</li>
+                    <li>width: Largura do vídeo;</li>
+                    <li>autoplay: Executado o vídeo quando a página é carregada;</li>
+                    <li>controls: Customiza os controles a serem mostrados;</li>
+                    <li>loop: Quando o vídeo termina, volta para o inicio;</li>
+                    <li>muted: Controle para deixar mudo o vídeo;</li>
+                    <li>poster: determina a imagem a ser apresentada enquanto o vídeo é carregado ou o usuário clica no play;</li>
+                    <li>preload: Carregamento do vídeo quando é lida a página(auto metadata none).</li>                 
+                </ul>
+
+                <p>Utilizando a tag <code>&lt;video&gt;</code>:</p>
+                <pre>
+                    <code>
+                        &lt;video width="800" height="600" controls&gt;
+                            &lt;source src="movie.mp4" type="video/mp4"&gt;
+                            &lt;source src="movie.ogg" type="video/ogg"&gt;
+                            Seu navegador não suporta este recurso.
+                        &lt;/video&gt;
+                    </code>
+                </pre>
+
+                <h3>No caso do canvas, HTML5 nunca, em momento algum, fez qualquer animação. Isso
+                    porque o HTML5 é uma simples linguagem de marcação. Dessa forma, o que é necessário para criar animações
+                    com HTML5? O que são APIs do HTML5?</h3>
+
+                <p>O HTML 5, como linguagem de marcação somente, não faz verão. Por isso para aproveitar as funcionalidade de algumas API, usamos o javascript para manipular
+                     as propriedades do DOM - Document Object Model - e do BOM - Browser Object Model.</p>
+                <p> Para criar animações usamos a API <code>&lt;canvas&gt;</code>, que permite junto a linguagem de programação javascript fazer animações.</p>
+                <p>APIs HTML são funcionalidade criadas para que a criação de websites com muitos recursos a serem usados pelos desenvolvedores através de javascript, typescript
+                    e outras linguagens de front-end.</p>
+                <p>Podemos listar APIs HTML5 como, por exemplo: Validação de formulários, Controles de áudio e vídeo, Canvas, Geolocalização, Aramzenamento local, Caches,
+                     Históricos, favoritos e etc...</p>
+
+                <h3>Como o CSS3 pode ser aplicado na aparência da multimídia HTML5. Demonstre com um exemplo.</h3>
+
+                <p>Usando os seletores abaixo podemos mudar a aparência da multimidia:</p>
+                <ul>
+                    <li>-webkit-media-controls-panel</li>
+                    <li>-webkit-media-controls-play-button</li>
+                    <li>-webkit-full-page-media::-webkit-media-controls-panel</li>
+                    <li>-webkit-media-controls-volume-slider</li>
+                    <li>-webkit-media-controls-time-remaining-display</li>
+                    <li>-webkit-media-controls-volume-slider-container</li>
+                    <li>-webkit-media-controls-mute-button</li>
+                    <li>-webkit-media-controls-timeline</li>
+                    <li>-webkit-media-controls-current-time-display</li>
+                    <li>-webkit-media-controls-timeline-container</li>
+                </ul>
+                <p>Arquivo criado no Replit (Endereço no final):</p>
+                <p>HTML (index.html):</p>
+                <pre>
+                    <code>
+                        &lt;div class="video-player"&gt;
+                        &lt;video id="video" controls&gt;
+                            &lt;source src="https://edisciplinas.usp.br/pluginfile.php/5182764/mod_resource/content/1/libras-intro.mp4" type="video/mp4" /&gt;
+                        &lt;/video&gt;
+                    &lt;/div&gt;
+                    </code>
+                </pre>
+                <p>CSS (style.css):</p>
+                <pre>
+                    <code>
+                        html, body {
+                            height: 100%;
+                            width: 100%;
+                          }
+                          
+                          .video-player {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              height: 100vh;
+                          }
+                          
+                          video {
+                              width: 100%;
+                              max-width: 800px;
+                          }
+                          
+                          /* BOTÃO PLAY  */
+                          video::-webkit-media-controls-play-button {
+                              background-color: #083147;
+                              margin: 0 0.5rem 0.5rem 0;
+                              height: 1.5rem;
+                              border-radius: 5px;
+                          }
+                          
+                          /* ALTERA VOLUME  */
+                          video::-webkit-media-controls-volume-slider {
+                            background-color: #083147;
+                            padding-top: 0;
+                            margin-top: 20px;
+                            padding-bottom: 0;
+                          }
+                          
+                          /* ALTERA VOLUME  */
+                          video::-webkit-media-controls-mute-button:hover {
+                              background-color: #083147;
+                              border-radius: 50%;
+                          }
+                          
+                          /* ALTERA TIME LINE  */
+                          video::-webkit-media-controls-timeline {
+                            background-color: #083147;
+                            padding-bottom: 0;
+                            margin-bottom: 20px;
+                          }
+                    </code>
+                </pre>
+                <p>O resultado pode ser acessado em: <a href="https://exampleMultimedia.valmorgarcia1.repl.co"
+                        target="_blank" alt="Exemplo de personalização de controles de
+                        vídeo">https://exampleMultimedia.valmorgarcia1.repl.co/</a></p>
+
+        </div>
+        <div id="questoes">
+            <h2>REFERÊNCIAS</h2>
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 1.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292348. Acesso em: 18 abr. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 2.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 29 abr. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 3.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 01 mai. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 4.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 07 mai. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 5.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 13 mai. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 6.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 23 mai. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 7.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 03 jun. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 8.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 05 jun. 2022.
+            </p>
+
+            <p>
+                INFNET. <strong>Roteiro de Aprendizagem ETAPA 9.</strong> 2022.
+                 Disponível em: https://lms.infnet.edu.br/moodle/mod/page/view.php?id=292284. Acesso em: 10 jun. 2022.
+            </p>
+
+            <p>
+                SUPERBIZ (Brasil). <strong>Site responsivo ou site mobile: qual é a melhor opção?</strong>  2019.
+                  Disponível em: https://www.superbiz.com.br/blog/site-responsivo-ou-site-mobile/. Acesso em: 20 jun. 2022.
+            </p>
+
+            <p>
+                DOCS, Mdn Web. <strong>Canvas</strong>. Disponível em:
+                https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API. Acesso em: 16 jun. 2022.
+            </p>
+
+            <p>
+                UTILIZANDO APIs do HTML5 para o desenvolvimento de aplicações mobile. 2022. Disponível
+                 em: https://www.devmedia.com.br/utilizando-apis-do-html5-para-o-desenvolvimento-de-aplicacoes-mobile/37147. Acesso em: 21 jun. 2022.
+            </p>
+
+            <p>
+                MAGALHÃES, Laryssa. <strong>Segredos do media print.</strong> 2016. Disponível
+                 em: https://medium.com/@larymagal/segredos-do-media-print-dcd69cef1f56. Acesso em: 19 jun. 2022.
+            </p>
+
+            <p>
+                SCHOOLS, W3. <strong>HTML &lt;audio&gt; Tag</strong>. Disponível em:
+                https://www.w3schools.com/tags/tag_audio.asp. Acesso em: 22 jun. 2022.
+            </p>
+
+            <p>
+                SCHOOLS, W3. <strong>HTML &lt;video&gt; Tag</strong>. Disponível em:
+                https://www.w3schools.com/tags/tag_video.asp. Acesso em: 22 jun. 2022.
+            </p>
+
+            <p>
+                REPLIT: <a href="https://replit.com/@ValmorGarcia1/exampleMultimedia#index.html" target="_blank">https://replit.com/@ValmorGarcia1/exampleMultimedia#index.html</a>
+            </p>
+
+            <p>
+                GITHUB: <a href="https://github.com/ValmorMachado/AT-DR1-HTML" target="_blank">https://github.com/ValmorMachado/AT-DR1-HTML</a>
+            </p>
+
+        </div>
+
+        <div id="topo">
+            <figure>
+                <a href="#"><img src="images/topo-botao.png" alt="Início"></a>
+            </figure>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; Instituto Infnet - Assessment Interfaces com HTML e CSS</p>
+    </footer>
+
+
+</body>
+
+</html>
